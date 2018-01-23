@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:toolbar="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_movie_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.fjnu.zjf.movie.activities.MovieDetailActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@android:color/black"
+        toolbar:titleTextColor="@android:color/white"
+        toolbar:navigationIcon="@drawable/navigationicon"
+        toolbar:title="@string/app_name"/>
+    <com.gigamole.library.navigationtabstrip.NavigationTabStrip
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/tab_strip"
+        app:nts_titles="@array/title_detail"
+        app:nts_size="15sp"
+        android:background="#141414"
+        app:nts_color="@android:color/darker_gray"
+        app:nts_type="point"/>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

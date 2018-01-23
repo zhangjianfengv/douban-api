@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_grid"
+        android:layout_width="90dp"
+        android:layout_height="150dp" />
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="90dp"
+        android:layout_height="25dp"
+        android:maxLines="1"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:ellipsize="middle"/>
+    <!--android:ellipsize="middle"设置文字过长时省略号显示在中间-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RatingBar
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:minHeight="11dp"
+            android:stepSize="0.5"
+            android:isIndicator="true"
+            android:progressDrawable="@drawable/ratingbar_back"/>
+        <!--android:isIndicator="true"这行的目的是设置ratingbar不可点击，防止抢去gridview的点击事件-->
+        <TextView
+            android:id="@+id/tv_rating"
+            android:textColor="#ff7302"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"/>
+    </LinearLayout>
+</LinearLayout>
